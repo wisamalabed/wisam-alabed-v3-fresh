@@ -2,10 +2,11 @@ import { Work } from "@/utils/resume.ts";
 
 export function WorkCard(props: { work: Work }) {
   const { work } = props;
+
   return (
     <div class="flex flex-col flex-wrap gap-2 py-4">
       <span class="font-extralight text-xs text-gray-200 sm:self-end  invisible sm:visible">
-        {work.startDate} - {work.endDate}
+        {work.startDate} - {work.endDate ? work.endDate : "Present"}
       </span>
       <a
         class="font-extrabold text-rose-500 inline-flex gap-2"
@@ -32,7 +33,7 @@ export function WorkCard(props: { work: Work }) {
       </a>
       <p class="font-semibold font-mono">{work.position}</p>
       <span class="font-extralight text-xs text-gray-200 sm:invisible visible">
-        {work.startDate} - {work.endDate}
+        {work.startDate} - {work.endDate ? work.endDate : "Present"}
       </span>
       <div class="space-y-2">
         <p class="text-sm md:text-base">{work.summary}</p>

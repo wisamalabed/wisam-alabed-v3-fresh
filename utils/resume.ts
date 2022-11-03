@@ -32,10 +32,3 @@ export interface Work {
   endDate: string;
   highlights: Array<string>;
 }
-
-export async function getResume(): Promise<Resume> {
-  const file = await Deno.readTextFile("./static/resume.json");
-  const resume = JSON.parse(file);
-  resume.basics.title = "Senior Software Engineer";
-  return resume;
-}

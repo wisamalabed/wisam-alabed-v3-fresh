@@ -14,7 +14,7 @@ export function Experience(props: { data: Array<Work> }) {
         from="emerald-500"
         to="red-500"
       >
-        {data.map((work) => (
+        {data?.map((work) => (
           <WorkCard work={work} />
         ))}
       </Card>

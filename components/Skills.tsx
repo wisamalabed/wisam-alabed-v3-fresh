@@ -14,7 +14,7 @@ export function Skills(props: { data: Array<Skill> }) {
         from="blue-500"
         to="yellow-500"
       >
-        {data.map((skill) => (
+        {data?.map((skill) => (
           <SkillCard skill={skill} />
         ))}
       </Card>
