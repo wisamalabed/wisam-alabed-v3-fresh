@@ -5,11 +5,15 @@ export function Footer() {
     <footer class="text-gray-100">
       <div class="container px-5 py-8 mx-auto flex flex-col items-center space-y-4">
         <span class="inline-flex sm:mx-auto sm:mt-0 mt-4 justify-center">
-          <a class="text-gray-100" href="https://github.com/wisamalabed">
+          <a
+            class="text-gray-100"
+            href="https://github.com/wisamalabed"
+            aria-label="Wisam Al Abed's Github Page"
+          >
             <Icon url="github" class="w-7 h-7" />
           </a>
         </span>
-        <a href="https://fresh.deno.dev">
+        <a href="https://fresh.deno.dev" aria-label="Fresh home Page">
           <svg
             width="197"
             height="37"

@@ -23,7 +23,7 @@ export default function Home({ data }: PageProps<Resume | null>) {
   }
 
   return (
-    <main class="bg-gray-900 snap-y snap-mandatory">
+    <main class="bg-gray-900 flex flex-col gap-6 p-6">
       <Summary data={data.basics} />
       <Skills data={data.skills} />
       <Experience data={data.work} />

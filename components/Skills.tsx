@@ -6,7 +6,7 @@ export function Skills(props: { data: Array<Skill> }) {
   const { data } = props;
 
   return (
-    <section class="snap-center snap-always h-screen sm:h-full p-12">
+    <section class="w-full">
       <Card
         heading="Skills"
         subHeading="What am I good at."

@@ -6,7 +6,7 @@ export function Experience(props: { data: Array<Work> }) {
   const { data } = props;
 
   return (
-    <section class="snap-center snap-always h-full p-12">
+    <section class="w-full">
       <Card
         image_url="activity"
         heading="Experience"

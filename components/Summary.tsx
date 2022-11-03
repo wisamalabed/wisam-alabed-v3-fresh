@@ -9,7 +9,7 @@ export function Summary(props: { data: Basic }) {
   const link = apply`relative group text-rose-200 hover:text-rose-300`;
   const linkUnderline = apply`bg-rose-300 h-[3px] w-0 group-hover:!w-full absolute bottom-[-2px] left-0 transition-all duration-300`;
   return (
-    <section class="snap-center snap-always h-screen sm:h-full p-12 text-center sm:text-left">
+    <section class="text-center sm:text-left w-full">
       <Card
         heading={data.name}
         subHeading={data.title}

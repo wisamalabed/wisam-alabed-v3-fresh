@@ -5,7 +5,7 @@ export function Tech() {
   const link = apply`group relative text-rose-200 hover:text-rose-300`;
   const linkUnderline = apply`bg-rose-300 h-[3px] w-0 group-hover:!w-full absolute bottom-[-2px] left-0 transition-all duration-300`;
   return (
-    <section class="snap-center snap-always h-full sm:h-full p-12">
+    <section class="w-full">
       <Card
         heading="Tech"
         subHeading="How this site is built."
