@@ -17,6 +17,7 @@ export const handler: Handlers<Resume | null> = {
     }
     const result = await resp.json();
     const resume: Resume = JSON.parse(result.files["resume.json"].content);
+    resume.basics.title = "Senior Software Engineer";
     return ctx.render(resume);
   },
 };
