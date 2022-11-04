@@ -6,9 +6,12 @@ interface UseDarkModeOutput {
 }
 
 function useDarkMode(defaultValue?: boolean): UseDarkModeOutput {
-  const storedDarkMode = parseJSON(
-    window.localStorage.getItem("DARK_MODE"),
-  ) as boolean;
+  let storedDarkMode = false;
+  if (typeof window !== "undefined") {
+    storedDarkMode = parseJSON(
+      window.localStorage.getItem("DARK_MODE"),
+    ) as boolean;
+  }
   const [isDarkMode, setDarkMode] = useState<boolean>(
     defaultValue ?? storedDarkMode ?? true,
   );
