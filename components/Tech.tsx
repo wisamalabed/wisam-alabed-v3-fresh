@@ -2,8 +2,8 @@ import { tw, apply } from "twind";
 import { Card } from "@/components/Card.tsx";
 
 export function Tech() {
-  const link = apply`group relative text-rose-200 hover:text-rose-300`;
-  const linkUnderline = apply`bg-rose-300 h-[3px] w-0 group-hover:!w-full absolute bottom-[-2px] left-0 transition-all duration-300`;
+  const link = apply`group relative text-sky-800 hover:text-sky-900 dark:(text-rose-200 hover:text-rose-300)`;
+  const linkUnderline = apply`bg-sky-900 dark:bg-rose-300 h-[3px] w-0 group-hover:!w-full absolute bottom-[-2px] left-0 transition-all duration-300`;
   return (
     <section class="w-full">
       <Card

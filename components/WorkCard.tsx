@@ -5,11 +5,11 @@ export function WorkCard(props: { work: Work }) {
 
   return (
     <div class="flex flex-col flex-wrap gap-2 py-4">
-      <span class="font-extralight text-xs text-gray-200 sm:self-end  invisible sm:visible">
+      <span class="font-extralight text-xs text-gray-900 dark:text-gray-200 sm:self-end  invisible sm:visible">
         {work.startDate} - {work.endDate ? work.endDate : "Present"}
       </span>
       <a
-        class="font-extrabold text-rose-500 inline-flex gap-2"
+        class="font-extrabold text-sky-900 dark:text-rose-500 inline-flex gap-2"
         href={work.website}
         target="_blank"
       >
@@ -32,7 +32,7 @@ export function WorkCard(props: { work: Work }) {
         </svg>
       </a>
       <p class="font-semibold font-mono">{work.position}</p>
-      <span class="font-extralight text-xs text-gray-200 sm:invisible visible">
+      <span class="font-extralight text-xs text-gray-700 dark:text-gray-200 sm:invisible visible">
         {work.startDate} - {work.endDate ? work.endDate : "Present"}
       </span>
       <div class="space-y-2">
@@ -43,7 +43,7 @@ export function WorkCard(props: { work: Work }) {
           ))}
         </ul>
       </div>
-      <hr class="border-rose-500 border-b-2 border-dotted mt-4 w-3/4 self-center " />
+      <hr class="border-sky-900 dark:border-rose-500 border-b-2 border-dotted mt-4 w-3/4 self-center " />
     </div>
   );
 }

@@ -1,11 +1,11 @@
 import { PageProps, Handlers } from "$fresh/server.ts";
-
-import { Resume, getResume } from "@/utils/resume.ts";
+import { Resume } from "@/utils/resume.ts";
 import { Summary } from "@/components/Summary.tsx";
 import { Footer } from "@/components/Footer.tsx";
 import { Skills } from "@/components/Skills.tsx";
 import { Experience } from "@/components/Experience.tsx";
 import { Tech } from "@/components/Tech.tsx";
+import Toggle from "@/islands/Toggle.tsx";
 
 export const handler: Handlers<Resume | null> = {
   GET: async (_, ctx) => {
@@ -25,7 +25,7 @@ export const handler: Handlers<Resume | null> = {
 export default function Home({ data }: PageProps<Resume | null>) {
   if (!data) {
     return (
-      <main class="bg-gray-900 flex flex-col gap-6 p-6">
+      <main class={`bg-white dark:bg-gray-900 flex flex-col gap-6 p-6`}>
         <Summary
           data={{
             name: "Wisam Al Abed",
@@ -41,7 +41,10 @@ export default function Home({ data }: PageProps<Resume | null>) {
   }
 
   return (
-    <main class="bg-gray-900 flex flex-col gap-6 p-6">
+    <main
+      class={`bg-[#e2e8f0] dark:bg-gray-900 flex flex-col gap-6 p-6 transition duration-500`}
+    >
+      <Toggle />
       <Summary data={data.basics} />
       <Skills data={data.skills} />
       <Experience data={data.work} />

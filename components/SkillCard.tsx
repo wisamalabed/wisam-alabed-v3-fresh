@@ -8,11 +8,11 @@ export function SkillCard(props: { skill: Skill }) {
   if (skill.name.toLowerCase() === "frameworks") {
     pillColor = "bg-blue-600";
   } else if (skill.name.toLowerCase() === "devops") {
-    pillColor = "bg-lime-600";
+    pillColor = "bg-violet-600";
   }
   return (
     <>
-      <h4 class="font-bold mb-4 mt-4">{skill.name}</h4>
+      <h3 class="font-bold mb-4 mt-4">{skill.name}</h3>
       <div class="flex flex-wrap gap-4">
         {skill.keywords.map((keyword) => (
           <span class={tw`${pill} ${pillColor}`}>{keyword}</span>
