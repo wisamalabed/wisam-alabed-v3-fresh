@@ -22,7 +22,9 @@ function useDarkMode(defaultValue?: boolean): UseDarkModeOutput {
     } else {
       document.documentElement.classList.remove("dark");
     }
-    window.localStorage.setItem("DARK_MODE", JSON.stringify(isDarkMode));
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem("DARK_MODE", JSON.stringify(isDarkMode));
+    }
   }, [isDarkMode]);
 
   return {
