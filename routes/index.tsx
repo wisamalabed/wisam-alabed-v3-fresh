@@ -44,7 +44,7 @@ export default function Home({ data }: PageProps<Resume | null>) {
     <main
       class={`bg-[#e2e8f0] dark:bg-gray-900 flex flex-col gap-6 p-6 transition duration-500`}
     >
-      {/* <Toggle /> */}
+      <Toggle />
       <Summary data={data.basics} />
       <Skills data={data.skills} />
       <Experience data={data.work} />
