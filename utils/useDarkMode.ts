@@ -6,15 +6,16 @@ interface UseDarkModeOutput {
 }
 
 function useDarkMode(defaultValue?: boolean): UseDarkModeOutput {
-  let storedDarkMode = false;
-  // if (typeof window !== "undefined") {
-  //   storedDarkMode = parseJSON(
-  //     window.localStorage.getItem("DARK_MODE"),
-  //   ) as boolean;
-  // }
   const [isDarkMode, setDarkMode] = useState<boolean>(
-    defaultValue ?? storedDarkMode ?? true,
+    defaultValue ?? true,
   );
+
+  useEffect(() => {
+    const storedDarkMode = parseJSON(
+      window.localStorage.getItem("DARK_MODE"),
+    ) as boolean;
+    setDarkMode(storedDarkMode ?? true);
+  }, []);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -22,9 +23,8 @@ function useDarkMode(defaultValue?: boolean): UseDarkModeOutput {
     } else {
       document.documentElement.classList.remove("dark");
     }
-    // if (typeof window !== "undefined") {
-    //   window.localStorage.setItem("DARK_MODE", JSON.stringify(isDarkMode));
-    // }
+
+    window.localStorage.setItem("DARK_MODE", JSON.stringify(isDarkMode));
   }, [isDarkMode]);
 
   return {
